@@ -14,16 +14,17 @@
     }
 
     body {
-      background-color: #11151c;
+      background: linear-gradient(to bottom right, #0c0f15, #1e232b);
       color: #f5f5f7;
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: #1e232b;
-      padding: 3rem 1rem;
       text-align: center;
-      border-bottom: 1px solid #2e3a4a;
+      padding: 3rem 1rem;
     }
 
     header h1 {
@@ -38,9 +39,27 @@
       color: #c1c7d0;
     }
 
+    .highlight {
+      background-color: #ff365e;
+      color: #fff;
+      font-weight: 600;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+
     main {
+      flex: 1;
       max-width: 800px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       padding: 1rem;
     }
 
@@ -60,29 +79,34 @@
       color: #d3d6dc;
     }
 
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .cta-buttons a {
+      background-color: #292f3a;
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-buttons a:hover {
+      background-color: #ff365e;
+      transform: translateY(-2px);
+    }
+
     footer {
       text-align: center;
-      padding: 2rem;
-      border-top: 1px solid #2e3a4a;
+      padding: 2rem 1rem;
       color: #7a8494;
       font-size: 0.9rem;
-    }
-
-    .highlight {
-      background-color: #ff365e;
-      color: #fff;
-      font-weight: 600;
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      animation: pulse 2s infinite ease-in-out;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.7; }
-      100% { opacity: 1; }
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
   </style>
 </head>
@@ -91,6 +115,11 @@
     <h1>DeX Anti-Cheat</h1>
     <p>Deactivating eXploiters with Precision and Power</p>
     <div class="highlight">Server-Side Protection • Always Evolving</div>
+
+    <div class="cta-buttons">
+      <a href="#">Get Started</a>
+      <a href="#">Learn More</a>
+    </div>
   </header>
 
   <main>
